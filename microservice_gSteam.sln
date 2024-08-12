@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{18C8E7AC-B7A2-4674-9412-29F9BF6B4F92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameService", "src\GameService\GameService.csproj", "{71260AD5-D52B-4CF7-97F7-68E16EE68A26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71260AD5-D52B-4CF7-97F7-68E16EE68A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71260AD5-D52B-4CF7-97F7-68E16EE68A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71260AD5-D52B-4CF7-97F7-68E16EE68A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71260AD5-D52B-4CF7-97F7-68E16EE68A26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71260AD5-D52B-4CF7-97F7-68E16EE68A26} = {18C8E7AC-B7A2-4674-9412-29F9BF6B4F92}
+	EndGlobalSection
+EndGlobal
