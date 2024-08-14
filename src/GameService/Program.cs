@@ -1,8 +1,10 @@
 using GameService.Base;
+using GameService.Consumers;
 using GameService.Data;
 using GameService.Repositories;
 using GameService.Repositories.ForCategory;
 using GameService.Services;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -22,6 +24,26 @@ builder.Services.AddScoped(typeof(BaseResponseModel));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMassTransit(opt=>{
+    opt.AddConsumersFromNamespaceContaining<GameCreatedFaultConsumer>();
+
+     opt.AddEntityFrameworkOutbox<GameDbContext>(x=>{
+        x.QueryDelay = TimeSpan.FromSeconds(10);
+
+        x.UsePostgres();
+        x.UseBusOutbox();
+     });
+
+    opt.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("game",false));
+    opt.UsingRabbitMq((context,cfg) =>{
+          cfg.Host(builder.Configuration["RabbitMQ:Host"],"/",host =>{
+            host.Username(builder.Configuration.GetValue("RabitMQ:Username","guest"));
+            host.Username(builder.Configuration.GetValue("RabitMQ:Password","guest"));
+          });
+    });
+
+});
 
 var app = builder.Build();
 

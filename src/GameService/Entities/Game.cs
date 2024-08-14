@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using GameService.Base;
 using GameService.Entities;
 
@@ -18,7 +19,7 @@ public class Game:BaseModel
     public string RecommendedSystemRequirement { get; set; }
 
     public Guid CategoryId { get; set; }
-
+     [JsonIgnore]
     public Category Category { get; set; }
 
     public ICollection<GameImage> GameImages { get; set; }

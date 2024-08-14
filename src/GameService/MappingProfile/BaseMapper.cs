@@ -1,4 +1,5 @@
 using AutoMapper;
+using Contracts;
 using GameService.DTOs;
 using GameService.Entities;
 
@@ -10,5 +11,8 @@ public class BaseMapper:Profile
    public BaseMapper()
    {
     CreateMap<Category,CategoryDTO>().ReverseMap();
+    CreateMap<Game,GameDTO>().ReverseMap();
+    CreateMap<GameDTO,GameCreated>().ReverseMap();
+    CreateMap<Game,GameCreated>().ReverseMap();
    }
 }

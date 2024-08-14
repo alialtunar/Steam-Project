@@ -1,0 +1,12 @@
+C:\microservice_gSteam\src\Contracts\bin\Debug\net7.0\Contracts.deps.json
+C:\microservice_gSteam\src\Contracts\bin\Debug\net7.0\Contracts.dll
+C:\microservice_gSteam\src\Contracts\bin\Debug\net7.0\Contracts.pdb
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\Contracts.AssemblyInfoInputs.cache
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\Contracts.AssemblyInfo.cs
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\Contracts.csproj.CoreCompileInputs.cache
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\Contracts.sourcelink.json
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\Contracts.dll
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\refint\Contracts.dll
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\Contracts.pdb
+C:\microservice_gSteam\src\Contracts\obj\Debug\net7.0\ref\Contracts.dll
