@@ -41,6 +41,7 @@ builder.Services.AddMassTransit(opt=>{
             host.Username(builder.Configuration.GetValue("RabitMQ:Username","guest"));
             host.Username(builder.Configuration.GetValue("RabitMQ:Password","guest"));
           });
+          cfg.ConfigureEndpoints(context);
     });
 
 });

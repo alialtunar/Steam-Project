@@ -14,5 +14,6 @@ public class BaseMapper:Profile
     CreateMap<Game,GameDTO>().ReverseMap();
     CreateMap<GameDTO,GameCreated>().ReverseMap();
     CreateMap<Game,GameCreated>().ReverseMap();
+    CreateMap<Game,GameUpdated>().ReverseMap();
    }
 }

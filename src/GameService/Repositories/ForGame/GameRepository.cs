@@ -36,7 +36,7 @@ public class GameRepository : IGameRepository
       var objDto = _mapper.Map<Game>(game);
       objDto.VideoUrl = videoUrl;
       await _context.Games.AddAsync(objDto);
-        await _publishEndpoint.Publish(_mapper.Map<GameCreated>(objDto));
+      await _publishEndpoint.Publish(_mapper.Map<GameCreated>(objDto));
 
 
       if (await _context.SaveChangesAsync() > 0)
@@ -60,6 +60,7 @@ public class GameRepository : IGameRepository
     {
 
       _context.Games.Remove(game);
+      await _publishEndpoint.Publish<GameDeleted>(new {Id = gameId.ToString()});
       if (await _context.SaveChangesAsync() > 0)
       {
         _responseModel.IsSuccess = true;
@@ -112,6 +113,7 @@ public class GameRepository : IGameRepository
       gameObj.GameName = game.GameName;
       gameObj.RecommendedSystemRequirement = game.RecommendedSystemRequirement;
       gameObj.GameDescription = game.GameDescription;
+      await _publishEndpoint.Publish(_mapper.Map<GameUpdated>(gameObj));
       if (await _context.SaveChangesAsync() > 0)
       {
         _responseModel.IsSuccess = true;
