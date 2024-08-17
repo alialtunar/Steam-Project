@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Contracts")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("FilterService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0535f2a5163683eebeb62c24718f0613eaef2b67")]
-[assembly: System.Reflection.AssemblyProductAttribute("Contracts")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Contracts")]
+[assembly: System.Reflection.AssemblyProductAttribute("FilterService")]
+[assembly: System.Reflection.AssemblyTitleAttribute("FilterService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment sınıfı tarafından oluşturuldu.
